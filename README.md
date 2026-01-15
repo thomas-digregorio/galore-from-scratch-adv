@@ -8,6 +8,7 @@ It includes a custom optimizer `GaLoreAdamW`, a training script for language mod
 *   **Massive Memory Reduction**: Reduces optimizer state memory by up to 65% **by projecting gradients into a low-rank subspace** (Gradient Low-Rank Projection) instead of storing valid full-rank states.
 *   **Synchronous State Reset**: Ensures robust convergence by resetting momentum when the SVD basis changes.
 *   **Full Rank Warmup**: Starts with standard AdamW (Full Rank) to find a stable initial basin.
+*   **WandB Logging**: Integrated Weights & Biases logging for loss, gradient norms, and memory usage tracking.
 *   **Llama Compatible**: Designed to train Llama-architecture models (Configurable sizes).
 
 ## Installation
