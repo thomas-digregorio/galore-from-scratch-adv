@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+
+# WandB (Logging)
+wandb/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+venv/
+env/
+
+# Data
+.data/
