@@ -75,6 +75,10 @@ This repo serves as a **verification** of the GaLore algorithm implementation. T
 *   **Output**: The model successfully transitioned from random noise to coherent character/word spacing ("Structured Nonsense"), confirming the optimizer is learning.
 *   **Success Criteria**: The key indicator is that the Loss **continually decreases** and does not explode (NaN). This proves the Low-Rank Gradient Projection is correctly approximating the full gradient trajectory.
 
+> [!NOTE]
+> **Understanding Memory Savings**: The "65% reduction" claimed in Key Features applies specifically to **Optimizer State Memory** (which usually dominates training RAM).
+> In smaller models (like 125M), fixed costs (Weights, Activation Buffers) take up a larger proportion of VRAM, so the *Total VRAM* reduction percentage may appear smaller (e.g. 18-20%), even though the optimizer state itself is compressed by ~60%. As model size grows (7B+), the Total VRAM savings approach the Optimizer State savings percentage.
+
 ## Project Structure
 
 ```text
